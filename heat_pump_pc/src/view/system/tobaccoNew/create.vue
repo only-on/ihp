@@ -25,13 +25,13 @@
                 <Option v-for="item in cooperativeList" :value="item.id" :key="item.id">{{ item.name }}</Option>
               </Select>
             </FormItem>
-            <FormItem label="网关" class="selfClass">
+            <FormItem label="网关编号" class="selfClass">
               <!--<Input  v-model="updateModel.title"  style="width:450px;float: left"  placeholder="请输入烤房名称 " @on-change="titleVal(updateModel.title)"></Input>-->
               <InputNumber  v-model="updateModel.gatewayId"  style="width: 200px; float: left" :formatter="value => `${value}`.replace('.', '')"
                             :parser="value => value.replace('-', '')" :min="0" :max="99999999"></InputNumber>
               <br>
             </FormItem>
-            <FormItem label="dtu编号" class="selfClass">
+            <FormItem label="设备编号" class="selfClass">
               <!--<Input  v-model="updateModel.title"  style="width:450px;float: left"  placeholder="请输入烤房名称 " @on-change="titleVal(updateModel.title)"></Input>-->
               <InputNumber  v-model="updateModel.number"  style="width: 200px; float: left" :formatter="value => `${value}`.replace('.', '')"
                             :parser="value => value.replace('-', '')" :min="0" :max="99999999"></InputNumber>
@@ -194,10 +194,13 @@ export default {
         this.$Message.error('合作社不可以为空')
         return false
       } else if (this.updateModel.gatewayId === '' || this.updateModel.gatewayId === null) {
-        this.$Message.error('网关不可以为空')
+        this.$Message.error('网关编号不可以为空')
         return false
       } else if (this.updateModel.number === '' || this.updateModel.number === null) {
-        this.$Message.error('dtu编号不可以为空')
+        this.$Message.error('设备编号不可以为空')
+        return false
+      } else if (this.updateModel.number.length > 4) {
+        this.$Message.error('设备编号不可以超过四位')
         return false
       } else if (this.titleNotices) {
         this.$Message.error('烤房名称不可以为空')

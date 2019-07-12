@@ -100,13 +100,12 @@
                 :label="'角色 ' + (item.index + 1)"
                 :prop="'roleList.' + index + '.value'"
                 :rules="{required: true, message: '角色 ' + item.index +' 不能为空', trigger: 'blur'}">
-                <Row>
+                <Row @click.native="rowChange(index)">
                   <Col span="24">
-                  <div  @click="rowChange(index)">
+                  <div >
                     <Select :transfer="true" v-model="item.companyId" style="width:200px;float: left;text-align: left" placeholder="分公司" @on-change="selectChange">
                       <Option v-for="item in companyList" :value="item.id" :key="item.id">{{ item.name }}</Option>
                     </Select>
-                  </div>
                   <Select :transfer="true" v-model="item.cooperationId" clearable style="width:200px;float: left;text-align: left" placeholder="合作社" @on-change="cooperativeSelectChange">
                     <Option v-for="items in item.cooperativeList" :value="items.id" :key="items.id">{{ items.name }}</Option>
                   </Select>
@@ -114,6 +113,7 @@
                     <Option v-for="item in rolesList" :value="item.id" :key="item.id">{{ item.name }}</Option>
                   </Select>
                   <Button @click="handleRemove(index)" style="color: #82C225 !important">删除</Button>
+                  </div>
                   </Col>
                 </Row>
               </FormItem>
@@ -323,7 +323,15 @@ export default {
   methods: {
     cooperativeSelectChange (change) {
       if (change === undefined) {
-        this.updateModel.roleList[this.rowIndex].cooperationId = ''
+        if (this.rowIndex === '') {
+          for (let item of this.updateModel.roleList) {
+            if (item.cooperationId === undefined) {
+              item.cooperationId = ''
+            }
+          }
+        } else {
+          this.updateModel.roleList[this.rowIndex].cooperationId = ''
+        }
       }
     },
     rowChange (index) {
@@ -658,6 +666,11 @@ export default {
       if (res.data.code === 1000) {
         this.updateModel.tel = res.data.content.tel
         this.updateModel.sex = res.data.content.sex + ''
+        this.updateModel.age = res.data.content.age
+        this.updateModel.idcard = res.data.content.idcard
+        this.updateModel.realName = res.data.content.realName
+        this.updateModel.userType = res.data.content.userType + ''
+        this.updateModel.intro = res.data.content.intro
         if (res.data.content.regionIds.length > 0) {
           this.updateModel.realName = res.data.content.realName
           this.pName = res.data.content.regionVO.provinceName
@@ -666,7 +679,8 @@ export default {
           this.tName = res.data.content.regionVO.streetName
           this.updateModel.regionAddress = res.data.content.regionVO.provinceName + res.data.content.regionVO.cityName + res.data.content.regionVO.districtsName + res.data.content.regionVO.streetName + res.data.content.address
           this.updateModel.age = res.data.content.age
-          this.updateModel.addressDetail = res.data.content.address
+          this.updateModel.sex = res.data.content.sex + ''
+          this.updateModel.addressDetail = res.data.content.address !== null ? res.data.content.address : ''
           this.updateModel.idcard = res.data.content.idcard
           this.updateModel.headImage = res.data.content.headImageId
           this.faceCard = res.data.content.faceCardUrl

@@ -6,210 +6,224 @@
         <div class="card-title">
           实时温度状态
         </div>
-        <Row type="flex" justify="center">
-          <Col span="12" >
-          <div class="card-content-vip">
-            <img src="../assets/water.png" height="26" width="26"/>
-            <div class="card-content-title">烤房湿度
+        <div style="min-height: 345px">
+          <Row type="flex" justify="center">
+            <Col span="12" >
+            <div class="card-content-vip">
+              <img src="../assets/temperature.png" height="26" width="26"/>
+              <div class="card-content-title">烤房温度
+              </div>
+              <div class="card-content">
+                {{temperature.houseTemperature}}
+              </div>
             </div>
-            <div class="card-content">
-              {{temperature.houseHumidity}}
+            </Col>
+            <Col span="12" >
+            <div class="card-content-vip">
+              <img src="../assets/water.png" height="26" width="26"/>
+              <div class="card-content-title">烤房湿度
+              </div>
+              <div class="card-content">
+                {{temperature.houseHumidity}}
+              </div>
             </div>
-          </div>
-          </Col>
-          <Col span="12" >
-          <div class="card-content-vip">
-            <img src="../assets/temperature.png" height="26" width="26"/>
-            <div class="card-content-title">烤房温度
+            </Col>
+          </Row>
+          <Row type="flex" justify="center">
+            <Col span="12" >
+            <div class="card-content-vip">
+              <img src="../assets/temperature.png" height="26" width="26"/>
+              <div class="card-content-title">环境温度
+              </div>
+              <div class="card-content">
+                {{temperature.environmentTemperature}}
+              </div>
             </div>
-            <div class="card-content">
-              {{temperature.houseTemperature}}
+            </Col>
+            <Col span="12" >
+            <div class="card-content-vip">
+              <img src="../assets/temperature.png" height="26" width="26"/>
+              <div class="card-content-title">超温温度
+              </div>
+              <div class="card-content">
+                {{temperature.overtemperature}}
+              </div>
             </div>
-          </div>
-          </Col>
-        </Row>
-        <Row type="flex" justify="center">
-          <Col span="12" >
-          <div class="card-content-vip">
-            <img src="../assets/temperature.png" height="26" width="26"/>
-            <div class="card-content-title">环境温度
+            </Col>
+          </Row>
+          <Row type="flex" justify="center">
+            <Col span="12" >
+            <div class="card-content-vip-only">
+              <img src="../assets/temperature.png" height="26" width="26"/>
+              <div class="card-content-title-only">排气温度
+              </div>
             </div>
-            <div class="card-content">
-              {{temperature.environmentTemperature}}
+            </Col>
+            <Col span="12" >
+            </Col>
+          </Row>
+          <Row>
+            <Col span="8" push="4">
+            <div class="card-content-title-three">1#压缩机
             </div>
-          </div>
-          </Col>
-          <Col span="12" >
-          <div class="card-content-vip">
-            <img src="../assets/temperature.png" height="26" width="26"/>
-            <div class="card-content-title">超温温度
+            </Col>
+            <Col span="8" push="3" >
+            <div class="card-content-title-three">2#压缩机
             </div>
-            <div class="card-content">
-              {{temperature.overtemperature}}
+            </Col>
+            <Col span="8"  push="2">
+            <div class="card-content-title-three">3#压缩机
             </div>
-          </div>
-          </Col>
-        </Row>
-        <Row type="flex" justify="center">
-          <Col span="12" >
-          <div class="card-content-vip-only">
-            <img src="../assets/temperature.png" height="26" width="26"/>
-            <div class="card-content-title-only">排气温度
+            </Col>
+          </Row>
+          <Row>
+            <Col span="8" push="4">
+            <div class="card-content-three">
+              {{temperature.dischargeTemperature1}}
             </div>
-          </div>
-          </Col>
-          <Col span="12" >
-          </Col>
-        </Row>
-        <Row>
-          <Col span="8" push="4">
-          <div class="card-content-title-three">1#压缩机
-          </div>
-          </Col>
-          <Col span="8" push="3" >
-          <div class="card-content-title-three">2#压缩机
-          </div>
-          </Col>
-          <Col span="8"  push="2">
-          <div class="card-content-title-three">3#压缩机
-          </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col span="8" push="4">
-          <div class="card-content-three">
-            {{temperature.dischargeTemperature1}}
-          </div>
-          </Col>
-          <Col span="8" push="3">
-          <div class="card-content-three">
-            {{temperature.dischargeTemperature2}}
-          </div>
-          </Col>
-          <Col span="8" push="2">
-          <div class="card-content-three">
-            {{temperature.dischargeTemperature3}}
-          </div>
-          </Col>
-        </Row>
-        <Row type="flex" justify="center">
-          <Col span="12" >
-          <div class="card-content-vip-only">
-            <img src="../assets/temperature.png" height="26" width="26"/>
-            <div class="card-content-title-only">吸气温度
+            </Col>
+            <Col span="8" push="3">
+            <div class="card-content-three">
+              {{temperature.dischargeTemperature2}}
             </div>
-          </div>
-          </Col>
-          <Col span="12" >
-          </Col>
-        </Row>
-        <Row>
-          <Col span="8" push="4">
-          <div class="card-content-title-three">1#压缩机
-          </div>
-          </Col>
-          <Col span="8" push="3" >
-          <div class="card-content-title-three">2#压缩机
-          </div>
-          </Col>
-          <Col span="8"  push="2">
-          <div class="card-content-title-three">3#压缩机
-          </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col span="8" push="4">
-          <div class="card-content-three">
-            {{temperature.suctionTemperature1}}
-          </div>
-          </Col>
-          <Col span="8" push="3">
-          <div class="card-content-three">
-            {{temperature.suctionTemperature2}}
-          </div>
-          </Col>
-          <Col span="8" push="2">
-          <div class="card-content-three">
-            {{temperature.suctionTemperature3}}
-          </div>
-          </Col>
-        </Row>
-        <Row type="flex" justify="center">
-          <Col span="12" >
-          <div class="card-content-vip-only">
-            <img src="../assets/temperature.png" height="26" width="26"/>
-            <div class="card-content-title-only">盘管温度
+            </Col>
+            <Col span="8" push="2">
+            <div class="card-content-three">
+              {{temperature.dischargeTemperature3}}
             </div>
-          </div>
-          </Col>
-          <Col span="12" >
-          </Col>
-        </Row>
-        <Row>
-          <Col span="8" push="4">
-          <div class="card-content-title-three">1#压缩机
-          </div>
-          </Col>
-          <Col span="8" push="3" >
-          <div class="card-content-title-three">2#压缩机
-          </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col span="8" push="4">
-          <div class="card-content-three">
-            {{temperature.coilTemperature1}}
-          </div>
-          </Col>
-          <Col span="8" push="3">
-          <div class="card-content-three">
-            {{temperature.coilTemperature2}}
-          </div>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+          <Row type="flex" justify="center">
+            <Col span="12" >
+            <div class="card-content-vip-only">
+              <img src="../assets/temperature.png" height="26" width="26"/>
+              <div class="card-content-title-only">吸气温度
+              </div>
+            </div>
+            </Col>
+            <Col span="12" >
+            </Col>
+          </Row>
+          <Row>
+            <Col span="8" push="4">
+            <div class="card-content-title-three">1#压缩机
+            </div>
+            </Col>
+            <Col span="8" push="3" >
+            <div class="card-content-title-three">2#压缩机
+            </div>
+            </Col>
+            <Col span="8"  push="2">
+            <div class="card-content-title-three">3#压缩机
+            </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col span="8" push="4">
+            <div class="card-content-three">
+              {{temperature.suctionTemperature1}}
+            </div>
+            </Col>
+            <Col span="8" push="3">
+            <div class="card-content-three">
+              {{temperature.suctionTemperature2}}
+            </div>
+            </Col>
+            <Col span="8" push="2">
+            <div class="card-content-three">
+              {{temperature.suctionTemperature3}}
+            </div>
+            </Col>
+          </Row>
+          <Row type="flex" justify="center">
+            <Col span="12" >
+            <div class="card-content-vip-only">
+              <img src="../assets/temperature.png" height="26" width="26"/>
+              <div class="card-content-title-only">盘管温度
+              </div>
+            </div>
+            </Col>
+            <Col span="12" >
+            </Col>
+          </Row>
+          <Row>
+            <Col span="8" push="4">
+            <div class="card-content-title-three">1#压缩机
+            </div>
+            </Col>
+            <Col span="8" push="3" >
+            <div class="card-content-title-three">2#压缩机
+            </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col span="8" push="4">
+            <div class="card-content-three">
+              {{temperature.coilTemperature1}}
+            </div>
+            </Col>
+            <Col span="8" push="3">
+            <div class="card-content-three">
+              {{temperature.coilTemperature2}}
+            </div>
+            </Col>
+          </Row>
+        </div>
       </div>
       <div class="left-content" >
         <div class="card-title">
           实时输出状态
         </div>
-        <div style="margin: 5%;">
-          <Row style="margin-bottom: 8px">
+        <div style="padding: 10px;min-height: 345px">
+          <Row style="margin-bottom: 3px">
             <img src="../assets/wind.png" height="26" width="26" style="float: left"/>
-            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left">烤房风机正传</div>
-            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.fanTurn">运行中</div>
-            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.fanTurn">已停止</div>
+            <span style="font-size: 14px;font-weight: 400;min-width: 40px;">烤房风机正传</span>
+            <span style="font-size: 14px;font-weight: 400;min-width: 30px;color: rgba(255,206,85,1);margin-left: 20px" v-show="output.fanTurn">运行中</span>
+            <span style="font-size: 14px;font-weight: 400;min-width: 30px;color: rgba(78,167,196,1);margin-left: 20px" v-show="!output.fanTurn">已停止</span>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
             <img src="../assets/wind.png" height="26" width="26" style="float: left"/>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left">烤房风机反传</div>
-            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.fanReversal">运行中</div>
-            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.fanReversal">已停止</div>
+            <div style="font-size: 14px;font-weight: 400;min-width: 30px;float: left;color: rgba(255,206,85,1);margin-left: 20px" v-show="output.fanReversal">运行中</div>
+            <div style="font-size: 14px;font-weight: 400;min-width: 30px;float: left;color: rgba(78,167,196,1);margin-left: 20px" v-show="!output.fanReversal">已停止</div>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
             <img src="../assets/wind.png" height="26" width="26" style="float: left"/>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left">进风风机</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.fanAirIn">运行中</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.fanAirIn">已停止</div>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
             <img src="../assets/wind.png" height="26" width="26" style="float: left"/>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left">出风风机</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.fanAirOut">运行中</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.fanAirOut">已停止</div>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
             <img src="../assets/wind.png" height="26" width="26" style="float: left"/>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left" >排热风机</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.fanHeatExtraction">运行中</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.fanHeatExtraction">已停止</div>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
+            <img src="../assets/wind.png" height="26" width="26" style="float: left"/>
+            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left" >排湿风机</div>
+            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.fanDehumidifying">运行中</div>
+            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.fanDehumidifying">已停止</div>
+          </Row>
+          <Row style="margin-bottom: 3px">
             <img src="../assets/hot.png" height="26" width="26" style="float: left"/>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left" >辅助加热</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(255,206,85,1);margin-left: 30px" v-show="output.auxiliaryHeating">运行中</div>
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="!output.auxiliaryHeating">已停止</div>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
+            <img src="../assets/lamp.png" height="26" width="26" style="float: left"/>
+            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left" >故障指示</div>
+            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: red;margin-left: 30px" v-show="output.status === 2 || output.status === '2'">有故障</div>
+            <div style="font-size: 14px;font-weight: 400;min-width: 60px;float: left;color: rgba(78,167,196,1);margin-left: 30px" v-show="output.status !== 2 && output.status !== '2'">无故障</div>
+          </Row>
+          <Row style="margin-bottom: 3px">
             <Col span="6">
             <div class="card-content-title-three">
               &nbsp;
@@ -231,7 +245,7 @@
             </div>
             </Col>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
             <Col span="6">
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;">压缩机</div>
             </Col>
@@ -250,7 +264,7 @@
 
             </Col>
           </Row>
-          <Row style="margin-bottom: 8px">
+          <Row style="margin-bottom: 3px">
             <Col span="6">
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;">回气加热</div>
             </Col>
@@ -269,7 +283,7 @@
 
             </Col>
           </Row>
-          <Row style="margin-bottom: 5px">
+          <Row style="margin-bottom: 3px">
             <Col span="6">
             <div style="font-size: 14px;font-weight: 400;min-width: 60px;">累计运行（h）</div>
             </Col>
@@ -322,9 +336,9 @@
           </Col>
         </Row>
       </div>
-    <div  class="main-center" style="margin-bottom: 5px;">
-      <Button @click="loginout"  class="btn-loginout" style="border: 1px solid #28D4FF !important;color: #fff !important;">退出监控中心</Button>
-    </div>
+      <Row  style="padding: 0px;margin-bottom: 5px;margin-right: 30px">
+        <Button @click="loginout"  class="btn-loginout" style="border: 1px solid #28D4FF !important;color: #fff !important;">退出监控中心</Button>
+      </Row>
       <div class="main-center" style="padding-top: 0px;margin-bottom: 5px">
         <Select style="width:200px;float: left;" placeholder="分公司" :transfer="true" v-model="companyId" @on-change="companyChange">
           <Option v-for="item in companyList" :value="item.id" :key="item.id">{{ item.name }}</Option>
@@ -386,7 +400,7 @@
       <div class="card-title">
         烤房图片
       </div>
-      <div style="height: 200px">
+      <div style="min-height: 200px">
         <Carousel autoplay v-model="value3">
           <CarouselItem v-if="imgList.length > 0" v-for="(item, index) in imgList" :key="index">
             <div class="demo-carousel">
@@ -417,12 +431,12 @@
             <!--<source :src="http_url" type="application/x-mpegURL" />-->
           <!--</video>-->
           <!--v-show="videoList.url !== undefined"-->
-          <div id="playWind" class="playWind" style="height: 26vh;width: 100%;text-align: center" v-show="videoList.url !== undefined">
-            <img src="../assets/videoBackgroup.jpg" style="height: 100%;width: 100%"/>
+          <div id="playWind" class="playWind" style="height: 230px;text-align: center" v-show="videoList.url !== undefined">
+            <!--<img src="../assets/videoBackgroup.jpg" style="height: 100%;width: 100%"/>-->
           </div>
-          <div class="mask-video" v-show="videoList.url !== undefined">
-            <Icon type="md-play" color="#fff" size="60" @click="playVideo(videoList)"/>
-          </div>
+          <!--<div class="mask-video" v-show="videoList.url !== undefined">-->
+            <!--<Icon type="md-play" color="#fff" size="60" @click="playVideo(videoList)"/>-->
+          <!--</div>-->
         </div>
       </div>
     </Col>
@@ -492,7 +506,9 @@ export default {
         returnAirHeat1: false,
         returnAirHeat2: false,
         returnAirHeat3: false,
-        unitStatus: false
+        unitStatus: false,
+        status: 1,
+        fanDehumidifying: false
       },
       temperature: {
         houseId: '',
@@ -555,12 +571,15 @@ export default {
     // console.log(8888)
     window.clearTimeout(this.mytimerNotice)
     window.clearInterval(this.mytimerHouse)
+    if (this.player !== '') {
+      this.player.stop()
+    }
   },
   methods: {
     loadmap () {
       const map = new BMap.Map('map', { enableMapClick: false })
       this.map = map
-      map.disableDragging()
+      // map.disableDragging()
       // 设置地图中心坐标
       map.centerAndZoom('北京', 6)
       // this.addBoundary(map)
@@ -568,6 +587,7 @@ export default {
       // map.enableScrollWheelZoom()
     },
     getDistribution () {
+      // console.log('map')
       this.pointArray = []
       this.markersArr = []
       this.echartsDates = {
@@ -604,7 +624,7 @@ export default {
             s.companyId = this.list[i].companyId
             this.echartsDates.x.push(this.list[i].name)
             this.echartsDates.totalY.push(this.list[i].count)
-            this.echartsDates.runningY.push(this.list[i].runCount)
+            this.echartsDates.runningY.push(this.list[i].runCount + this.list[i].troubleCount)
             s.point = new BMap.Point(gpsX, gpsY)
             pointArr.push(s.point)
             this.pointArray.push(s.point)
@@ -653,7 +673,7 @@ export default {
       // map.setViewport(pointArr)
     },
     addInfoWindow (index) {
-      var sContent = '<div style="position: relative">' +
+      var sContent = '<div style="position: relative;z-index: 99999999999">' +
         "<div style='border-bottom: 1px solid #009CFF;line-height:30px;font-size:16px;margin-bottom: 10px'>" + this.list[index].name + '</div>' +
         "<div style='height:25px;'>烤房总数：&nbsp;" + this.list[index].count + '</div>' +
         "<div style='height:25px;'>运行烤房数量：&nbsp;" + this.list[index].runCount + '</div>' +
@@ -684,8 +704,10 @@ export default {
       var infoWindow =  new BMapLib.InfoBox(this.map, sContent, opts)
       infoWindow.open(this.markersArr[index])
       // this.map.setViewport(this.pointArray)
-      this.map.centerAndZoom(pointArray, 20)
-      // this.map.setViewport(this.pointArray)
+      this.map.setViewport(pointArray)
+      this.map.setZoom(6)
+      // this.map.centerAndZoom(this.pointArray, 20)
+      this.map.panBy(0, 100)
       this.lastInfoWindow = infoWindow
     },
     getCompanylist () {
@@ -706,7 +728,7 @@ export default {
       this.list = []
       window.clearTimeout(this.mytimerNotice)
       window.clearInterval(this.mytimerHouse)
-      this.getDistribution()
+      // this.getDistribution()
       this.getCooperationlist(this.companyId)
       this.getNewsList(this.companyId)
     },
@@ -726,12 +748,13 @@ export default {
           if (this.cooperationId === '' || this.cooperationId === undefined) {
             this.cooperationId = this.cooperationList[0].id
           }
-          this.gethouselist(this.cooperationId)
-          this.getDistribution()
+          // this.getDistribution()
         } else {
           this.houseId = ''
           this.houseList = []
         }
+        this.gethouselist(this.cooperationId)
+        this.getDistribution()
       })
     },
     cooperationChange (change) {
@@ -741,57 +764,26 @@ export default {
       this.getCoooperationHouseInfor()
     },
     gethouselist (par) {
+      // console.log(par)
+      // console.log(222)
       if (this.flag === true) {
         this.houseId = ''
       }
       this.houseList = []
-      let para = {
-        cooperationId: par
-      }
-      getHouseSelect(para).then((res) => {
-        if (res.data.code === 1000) {
-          // console.log(res.data.content)
-          this.houseList = res.data.content
-          if (this.houseId === '') {
-            this.houseId = this.houseList[0].id
-            this.houseName = this.houseList[0].name
+      if (par !== '') {
+        let para = {
+          cooperationId: par
+        }
+        getHouseSelect(para).then((res) => {
+          if (res.data.code === 1000) {
+            // console.log(res.data.content)
+            this.houseList = res.data.content
+            if (this.houseId === '') {
+              this.houseId = this.houseList[0].id
+              this.houseName = this.houseList[0].name
+            }
           }
-        }
-        this.getHouseInfor(this.houseId)
-      })
-    },
-    houseChange (change) {
-      // console.log(change)
-      this.houseId = change.value
-      this.houseName = change.label
-      window.clearInterval(this.mytimerHouse)
-      this.getHouseInfor(change.value)
-    },
-    getCoooperationHouseInfor () {
-      let vm = this
-      for (let i = 0; i < vm.list.length; i++) {
-        if (vm.list[i].id === vm.cooperationId) {
-          vm.addInfoWindow(i)
-        }
-      }
-    },
-    getHouseInfor (id) {
-      window.clearInterval(this.mytimerHouse)
-      if (id !== '') {
-        for (let d of this.houseList) {
-          if (d.id === id) {
-            this.getImgList(id, d.bakeId)
-            this.getUrl(d.bakeId)
-          }
-        }
-        let vm = this
-        vm.$nextTick(() => {
-          vm.getTemperatureFunction(id)
-          vm.getOutputInforFunction(id)
-          vm.mytimerHouse = setInterval(function () {
-            vm.getTemperatureFunction(id)
-            vm.getOutputInforFunction(id)
-          }, 10000)
+          this.getHouseInfor(this.houseId)
         })
       } else {
         this.temperature = {
@@ -832,11 +824,231 @@ export default {
           returnAirHeat1: false,
           returnAirHeat2: false,
           returnAirHeat3: false,
-          unitStatus: false
+          unitStatus: false,
+          status: 1,
+          fanDehumidifying: false
         }
         this.imgList = []
         this.videoList = {}
       }
+    },
+    houseChange (change) {
+      window.clearInterval(this.mytimerHouse)
+      // console.log(change)
+      if (change !== undefined) {
+        this.houseId = change.value
+        this.houseName = change.label
+      } else {
+        this.houseId = ''
+        this.houseName = ''
+      }
+      this.getHouseInfor(this.houseId)
+    },
+    getCoooperationHouseInfor () {
+      let vm = this
+      for (let i = 0; i < vm.list.length; i++) {
+        if (vm.list[i].id === vm.cooperationId) {
+          vm.inforWindowIndex = i
+          vm.addInfoWindow(i)
+        }
+      }
+    },
+    getHouseInfor (id) {
+      // console.log(id)
+      if (this.player !== '') {
+        this.player.stop()
+      }
+      window.clearInterval(this.mytimerHouse)
+      let bakeId = ''
+      if (id !== '') {
+        for (let d of this.houseList) {
+          if (d.id === id) {
+            bakeId = d.bakeId
+            this.getImgList(id, d.bakeId)
+            this.getUrl(id)
+            // console.log(id)
+          }
+        }
+      } else {
+        this.temperature = {
+          houseId: '',
+          houseTemperature: '-',
+          overtemperature: '-',
+          suctionTemperature1: '-',
+          suctionTemperature2: '-',
+          suctionTemperature3: '-',
+          houseHumidity: '-',
+          environmentTemperature: '-',
+          dischargeTemperature3: '-',
+          dischargeTemperature2: '-',
+          dischargeTemperature1: '-',
+          coilTemperature3: '-',
+          coilTemperature2: '-',
+          coilTemperature1: '-'
+        }
+        this.output = {
+          houseId: '',
+          auxiliaryHeating: false,
+          compressor1: false,
+          compressor2: false,
+          compressor3: false,
+          compressorRunningTime1: '-',
+          compressorRunningTime2: '-',
+          compressorRunningTime3: '-',
+          compressorStatus1: false,
+          compressorStatus2: false,
+          compressorStatus3: false,
+          electronicExpansionValve1: '-',
+          electronicExpansionValve2: '-',
+          fanAirIn: false,
+          fanAirOut: false,
+          fanHeatExtraction: false,
+          fanReversal: false,
+          fanTurn: false,
+          returnAirHeat1: false,
+          returnAirHeat2: false,
+          returnAirHeat3: false,
+          unitStatus: false,
+          status: 1,
+          fanDehumidifying: false
+        }
+        this.imgList = []
+        this.videoList = {}
+      }
+      let vm = this
+      vm.$nextTick(() => {
+        vm.getTemperatureFunction(id)
+        vm.getOutputInforFunction(id)
+        vm.mytimerHouse = setInterval(function () {
+          // console.log(9)
+          if (vm.list.length > 0) {
+            let para = {
+              cooperationId: vm.cooperationId
+            }
+            getHouseSelect(para).then((res) => {
+              if (res.data.code === 1000) {
+                vm.houseList = res.data.content
+                let cunt = true
+                for (let item of vm.houseList) {
+                  if (item.id === id) {
+                    cunt = false
+                    bakeId = item.bakeId
+                    vm.getImgList(id, item.bakeId)
+                  }
+                }
+                if (cunt === true) {
+                  vm.houseId = vm.houseList[0].id
+                  vm.houseName = vm.houseList[0].name
+                  id = vm.houseId
+                  vm.getImgList(id, vm.houseList[0].bakeId)
+                }
+                if (id !== '') {
+                  vm.getUrl(id)
+                  vm.getTemperatureFunction(id)
+                  vm.getOutputInforFunction(id)
+                } else {
+                  vm.temperature = {
+                    houseId: '',
+                    houseTemperature: '-',
+                    overtemperature: '-',
+                    suctionTemperature1: '-',
+                    suctionTemperature2: '-',
+                    suctionTemperature3: '-',
+                    houseHumidity: '-',
+                    environmentTemperature: '-',
+                    dischargeTemperature3: '-',
+                    dischargeTemperature2: '-',
+                    dischargeTemperature1: '-',
+                    coilTemperature3: '-',
+                    coilTemperature2: '-',
+                    coilTemperature1: '-'
+                  }
+                  vm.output = {
+                    houseId: '',
+                    auxiliaryHeating: false,
+                    compressor1: false,
+                    compressor2: false,
+                    compressor3: false,
+                    compressorRunningTime1: '-',
+                    compressorRunningTime2: '-',
+                    compressorRunningTime3: '-',
+                    compressorStatus1: false,
+                    compressorStatus2: false,
+                    compressorStatus3: false,
+                    electronicExpansionValve1: '-',
+                    electronicExpansionValve2: '-',
+                    fanAirIn: false,
+                    fanAirOut: false,
+                    fanHeatExtraction: false,
+                    fanReversal: false,
+                    fanTurn: false,
+                    returnAirHeat1: false,
+                    returnAirHeat2: false,
+                    returnAirHeat3: false,
+                    unitStatus: false,
+                    status: 1,
+                    fanDehumidifying: false
+                  }
+                  vm.videoList = {}
+                  if (this.player !== '') {
+                    this.player.stop()
+                  }
+                }
+              }
+              vm.getDistribution()
+              window.clearTimeout(vm.mytimerNotice)
+              vm.getNewsList(vm.companyId)
+              vm.temperature = {
+                houseId: '',
+                houseTemperature: '-',
+                overtemperature: '-',
+                suctionTemperature1: '-',
+                suctionTemperature2: '-',
+                suctionTemperature3: '-',
+                houseHumidity: '-',
+                environmentTemperature: '-',
+                dischargeTemperature3: '-',
+                dischargeTemperature2: '-',
+                dischargeTemperature1: '-',
+                coilTemperature3: '-',
+                coilTemperature2: '-',
+                coilTemperature1: '-'
+              }
+              vm.output = {
+                houseId: '',
+                auxiliaryHeating: false,
+                compressor1: false,
+                compressor2: false,
+                compressor3: false,
+                compressorRunningTime1: '-',
+                compressorRunningTime2: '-',
+                compressorRunningTime3: '-',
+                compressorStatus1: false,
+                compressorStatus2: false,
+                compressorStatus3: false,
+                electronicExpansionValve1: '-',
+                electronicExpansionValve2: '-',
+                fanAirIn: false,
+                fanAirOut: false,
+                fanHeatExtraction: false,
+                fanReversal: false,
+                fanTurn: false,
+                returnAirHeat1: false,
+                returnAirHeat2: false,
+                returnAirHeat3: false,
+                unitStatus: false,
+                status: 1,
+                fanDehumidifying: false
+              }
+              vm.videoList = {}
+              this.imgList = []
+              if (this.player !== '') {
+                this.player.stop()
+              }
+            })
+          }
+        }, 120000)
+      })
     },
     getTemperatureFunction (id) {
       this.temperature = {
@@ -863,20 +1075,20 @@ export default {
           let dates = res.data.content
           if (dates !== undefined) {
             this.temperature = {
-              houseId: dates.houseId === null && dates.houseId === '' ? '' : dates.houseId,
-              houseTemperature: dates.houseTemperature === null && dates.houseTemperature === '' ? '-' : dates.houseTemperature,
-              overtemperature: dates.overtemperature === null && dates.overtemperature === '' ? '-' : dates.overtemperature,
-              suctionTemperature1: dates.suctionTemperature1 === null && dates.suctionTemperature1 === '' ? '-' : dates.suctionTemperature1,
-              suctionTemperature2: dates.suctionTemperature2 === null && dates.suctionTemperature2 === '' ? '-' : dates.suctionTemperature2,
-              suctionTemperature3: dates.suctionTemperature3 === null && dates.suctionTemperature3 === '' ? '-' : dates.suctionTemperature3,
-              houseHumidity: dates.houseHumidity === null && dates.houseHumidity === '' ? '-' : dates.houseHumidity,
-              environmentTemperature: dates.environmentTemperature === null && dates.environmentTemperature === '' ? '-' : dates.environmentTemperature,
-              dischargeTemperature3: dates.dischargeTemperature3 === null && dates.dischargeTemperature3 === '' ? '-' : dates.dischargeTemperature3,
-              dischargeTemperature2: dates.dischargeTemperature2 === null && dates.dischargeTemperature2 === '' ? '-' : dates.dischargeTemperature2,
-              dischargeTemperature1: dates.dischargeTemperature1 === null && dates.dischargeTemperature1 === '' ? '-' : dates.dischargeTemperature1,
-              coilTemperature3: dates.coilTemperature3 === null && dates.coilTemperature3 === '' ? '-' : dates.coilTemperature3,
-              coilTemperature2: dates.coilTemperature2 === null && dates.coilTemperature2 === '' ? '-' : dates.coilTemperature2,
-              coilTemperature1: dates.coilTemperature1 === null && dates.coilTemperature1 === '' ? '-' : dates.coilTemperature1
+              houseId: dates.houseId === null || dates.houseId === '' ? '' : dates.houseId,
+              houseTemperature: dates.houseTemperature === null || dates.houseTemperature === '' ? '-' : dates.houseTemperature,
+              overtemperature: dates.overtemperature === null || dates.overtemperature === '' ? '-' : dates.overtemperature,
+              suctionTemperature1: dates.suctionTemperature1 === null || dates.suctionTemperature1 === '' ? '-' : dates.suctionTemperature1,
+              suctionTemperature2: dates.suctionTemperature2 === null || dates.suctionTemperature2 === '' ? '-' : dates.suctionTemperature2,
+              suctionTemperature3: dates.suctionTemperature3 === null || dates.suctionTemperature3 === '' ? '-' : dates.suctionTemperature3,
+              houseHumidity: dates.houseHumidity === null || dates.houseHumidity === '' ? '-' : dates.houseHumidity,
+              environmentTemperature: dates.environmentTemperature === null || dates.environmentTemperature === '' ? '-' : dates.environmentTemperature,
+              dischargeTemperature3: dates.dischargeTemperature3 === null || dates.dischargeTemperature3 === '' ? '-' : dates.dischargeTemperature3,
+              dischargeTemperature2: dates.dischargeTemperature2 === null || dates.dischargeTemperature2 === '' ? '-' : dates.dischargeTemperature2,
+              dischargeTemperature1: dates.dischargeTemperature1 === null || dates.dischargeTemperature1 === '' ? '-' : dates.dischargeTemperature1,
+              coilTemperature3: dates.coilTemperature3 === null || dates.coilTemperature3 === '' ? '-' : dates.coilTemperature3,
+              coilTemperature2: dates.coilTemperature2 === null || dates.coilTemperature2 === '' ? '-' : dates.coilTemperature2,
+              coilTemperature1: dates.coilTemperature1 === null || dates.coilTemperature1 === '' ? '-' : dates.coilTemperature1
             }
           }
           // this.mytimerHouseTemperrature = setTimeout(this.getTemperatureFunction(id), 100000)
@@ -906,7 +1118,9 @@ export default {
         returnAirHeat1: false,
         returnAirHeat2: false,
         returnAirHeat3: false,
-        unitStatus: false
+        unitStatus: false,
+        status: 1,
+        fanDehumidifying: false
       }
       let par = {
         houseId: id
@@ -916,28 +1130,30 @@ export default {
           let dates = res.data.content
           if (dates !== undefined) {
             this.output = {
-              houseId: dates.houseId,
-              auxiliaryHeating: dates.auxiliaryHeating,
-              compressor1: dates.compressor1,
-              compressor2: dates.compressor2,
-              compressor3: dates.compressor3,
-              compressorRunningTime1: dates.compressorRunningTime1,
-              compressorRunningTime2: dates.compressorRunningTime2,
-              compressorRunningTime3: dates.compressorRunningTime3,
-              compressorStatus1: dates.compressorStatus1,
-              compressorStatus2: dates.compressorStatus2,
-              compressorStatus3: dates.compressorStatus3,
-              electronicExpansionValve1: dates.electronicExpansionValve1,
-              electronicExpansionValve2: dates.electronicExpansionValve2,
-              fanAirIn: dates.fanAirIn,
-              fanAirOut: dates.fanAirOut,
-              fanHeatExtraction: dates.fanHeatExtraction,
-              fanReversal: dates.fanReversal,
-              fanTurn: dates.fanTurn,
-              returnAirHeat1: dates.returnAirHeat1,
-              returnAirHeat2: dates.returnAirHeat2,
-              returnAirHeat3: dates.returnAirHeat3,
-              unitStatus: dates.unitStatus
+              houseId: dates.houseId === null || dates.houseId === '' ? '' : dates.houseId,
+              auxiliaryHeating: dates.auxiliaryHeating === null || dates.auxiliaryHeating === '' ? false : dates.auxiliaryHeating,
+              compressor1: dates.compressor1 === null || dates.compressor1 === '' ? false : dates.compressor1,
+              compressor2: dates.compressor2 === null || dates.compressor2 === '' ? false : dates.compressor2,
+              compressor3: dates.compressor3 === null || dates.compressor3 === '' ? false : dates.compressor3,
+              compressorRunningTime1: dates.compressorRunningTime1 === null || dates.compressorRunningTime1 === '' ? '-' : dates.compressorRunningTime1,
+              compressorRunningTime2: dates.compressorRunningTime2 === null || dates.compressorRunningTime2 === '' ? '-' : dates.compressorRunningTime2,
+              compressorRunningTime3: dates.compressorRunningTime3 === null || dates.compressorRunningTime3 === '' ? '-' : dates.compressorRunningTime3,
+              compressorStatus1: dates.compressorStatus1 === null || dates.compressorStatus1 === '' ? false : dates.compressorStatus1,
+              compressorStatus2: dates.compressorStatus2 === null || dates.compressorStatus2 === '' ? false : dates.compressorStatus2,
+              compressorStatus3: dates.compressorStatus3 === null || dates.compressorStatus3 === '' ? false : dates.compressorStatus3,
+              electronicExpansionValve1: dates.electronicExpansionValve1 === null || dates.electronicExpansionValve1 === '' ? '-' : dates.electronicExpansionValve1,
+              electronicExpansionValve2: dates.electronicExpansionValve2 === null || dates.electronicExpansionValve2 === '' ? '-' : dates.electronicExpansionValve2,
+              fanAirIn: dates.fanAirIn === null || dates.fanAirIn === '' ? false : dates.fanAirIn,
+              fanAirOut: dates.fanAirOut === null || dates.fanAirOut === '' ? false : dates.fanAirOut,
+              fanHeatExtraction: dates.fanHeatExtraction === null || dates.fanHeatExtraction === '' ? false : dates.fanHeatExtraction,
+              fanReversal: dates.fanReversal === null || dates.fanReversal === '' ? false : dates.fanReversal,
+              fanTurn: dates.fanTurn === null || dates.fanTurn === '' ? false : dates.fanTurn,
+              returnAirHeat1: dates.returnAirHeat1 === null || dates.returnAirHeat1 === '' ? false : dates.returnAirHeat1,
+              returnAirHeat2: dates.returnAirHeat2 === null || dates.returnAirHeat2 === '' ? false : dates.returnAirHeat2,
+              returnAirHeat3: dates.returnAirHeat3 === null || dates.returnAirHeat3 === '' ? false : dates.returnAirHeat3,
+              unitStatus: dates.unitStatus === null || dates.unitStatus === '' ? false : dates.unitStatus,
+              status: dates.status === null || dates.status === '' ? 1 : dates.status,
+              fanDehumidifying: dates.fanDehumidifying === null || dates.fanDehumidifying === '' ? false : dates.fanDehumidifying
             }
           }
           // this.mytimerHouseOutput = setTimeout(this.getOutputInforFunction(id), 10000)
@@ -961,7 +1177,7 @@ export default {
     getUrl (id) {
       this.videoList = {}
       let para = {
-        bakeId: id
+        houseId: id
       }
       getVideo(para).then((res) => {
         if (res.data.code === 1000) {
@@ -969,6 +1185,22 @@ export default {
             token: res.data.content.accessToken,
             url: res.data.content.address
           }
+          this.$nextTick(function () {
+            // console.log(this.$route.params)
+            let ele = document.getElementsByClassName('card-content-video')
+            let elePlay = document.getElementsByClassName('playWind')
+            let w = ele[0].clientWidth
+            elePlay[0].style.width = w - 30
+            this.player = new EZUIKit.EZUIPlayer({
+              id: 'playWind',
+              autoplay: true,
+              url: this.videoList.url,
+              accessToken: this.videoList.token,
+              decoderPath: '../../static/ezopen/',
+              width: w - 30,
+              height: 230
+            })
+          })
         } else {
           this.videoList = {}
         }
@@ -986,13 +1218,19 @@ export default {
       this.$router.push({name: 'monitor_video', params: {params: c, item: item}})
     },
     loginout () {
-      clearTimeout(this.mytimerNotice)
+      window.clearTimeout(this.mytimerNotice)
+      window.clearInterval(this.mytimerHouse)
       this.$router.push({path: '/'})
     },
     // mytimerHouse
     getNewsList (id) {
       let vm = this
+      vm.box4Notice = document.querySelector('.box4Notice')
       vm.newsListNotice = []
+      window.clearTimeout(this.mytimerNotice)
+      if (vm.box4Notice !== null) {
+        vm.box4Notice.innerHTML = ''
+      }
       let par = {
         companyId: id
       }
@@ -1002,9 +1240,11 @@ export default {
           let data = res.data.content
           if (data !== undefined && data.length > 0) {
             vm.newsListNotice = data
+            window.clearTimeout(this.mytimerNotice)
             vm.mytimerNotice = setTimeout(vm.stockUpNotice, vm.timeNotice)
           } else {
             vm.newsListNotice = []
+            window.clearTimeout(this.mytimerNotice)
           }
         }
       })
@@ -1016,10 +1256,10 @@ export default {
         vm.box3Notice = document.querySelector('.box3Notice')
         vm.box4Notice = document.querySelector('.box4Notice')
         if (vm.box4Notice !== null && vm.box3Notice !== null) {
-          if (vm.newsListNotice.length <= 3 && vm.newsListNotice.length >= 0) {
-            vm.box4Notice.innerHTML = ''
-          } else if (vm.newsListNotice.length > 3) {
+          if (vm.newsListNotice.length > 3) {
             vm.box4Notice.innerHTML = vm.box3Notice.innerHTML
+          } else {
+            vm.box4Notice.innerHTML = ''
           }
         }
         if (vm.areaNotice !== null && vm.newsListNotice.length > 3) {
@@ -1053,7 +1293,7 @@ export default {
         },
         grid: {
           left: '8%',
-          right: '15%',
+          right: '30%',
           width: 'auto',
           height: 'auto',
           containLabel: true
@@ -1207,7 +1447,7 @@ export default {
     height: 100%;
     color: rgba(254,254,255,1);
     font-family: MicrosoftYaHei;
-    min-width: 1000px;
+    min-width: 1234px;
     overflow-x: hidden;
   }
   .left-content {
@@ -1362,7 +1602,7 @@ export default {
     float: right;
     /*margin-bottom: 10px;*/
     border: 1px solid #28D4FF;
-    background: #040e2e;
+    background: #040e2e !important;
   }
   .main-content-left-top {
     position: absolute;
@@ -1401,7 +1641,7 @@ export default {
     border-right: 2px solid #28D4FF;
   }
   .card-content-vip {
-    margin: 10%;
+    margin: 10px;
     position: relative;
   }
   .card-content-vip-only {
@@ -1447,11 +1687,11 @@ export default {
     position: absolute;
   }
   .card-bar {
-    height: 250px;
+    height: 240px;
   }
   .card-content-video {
     width: 100%;
-    height: 100%;
+    height: 250px;
     padding: 10px;
     position: relative;
     text-align: center;

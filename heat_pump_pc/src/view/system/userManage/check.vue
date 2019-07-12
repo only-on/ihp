@@ -275,13 +275,15 @@ export default {
         this.updateModel.realName = res.data.content.realName
         this.updateModel.sex = res.data.content.sex + ''
         this.updateModel.age = res.data.content.age
-        this.updateModel.addressDetail = res.data.content.regionVO.provinceName + res.data.content.regionVO.cityName + res.data.content.regionVO.districtsName + res.data.content.regionVO.streetName + res.data.content.address
+        if (res.data.content.regionVO.provinceName !== undefined) {
+          this.updateModel.addressDetail = res.data.content.regionVO.provinceName + res.data.content.regionVO.cityName + res.data.content.regionVO.districtsName + res.data.content.regionVO.streetName + res.data.content.address
+        }
         this.updateModel.idcard = res.data.content.idcard
         // this.updateModel.headImage = res.data.content.headImageUrl
-        this.faceCard = res.data.content.faceCardUrl
-        this.backCard = res.data.content.backCardUrl
-        this.idcardInHand = res.data.content.idcardInHandUrl
-        this.headImage = res.data.content.headImageUrl
+        this.faceCard = res.data.content.faceCardUrl !== null ? res.data.content.faceCardUrl : ''
+        this.backCard = res.data.content.backCardUrl !== null ? res.data.content.backCardUrl : ''
+        this.idcardInHand = res.data.content.idcardInHandUrl !== null ? res.data.content.idcardInHandUrl : ''
+        this.headImage = res.data.content.headImageUrl !== null ? res.data.content.headImageUrl : ''
         this.updateModel.faceCardId = res.data.content.faceCardImageId
         this.updateModel.backCardId = res.data.content.backCardImageId
         this.updateModel.idcardInHandId = res.data.content.idcardInHandId

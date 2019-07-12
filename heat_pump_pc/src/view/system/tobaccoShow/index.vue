@@ -7,22 +7,29 @@
         <Select v-model="param.cooperationId" clearable style="width:200px;margin-right: 10px" placeholder="合作社" @on-change="selectCooperate">
           <Option v-for="item in cooperativeList" :value="item.id" :key="item.id">{{ item.name }}</Option>
         </Select>
-        <Select v-model="param.workStatus" clearable style="width:200px" placeholder="状态" @on-change="selectStatus">
+        <Select v-model="param.workStatus" clearable style="width:200px;margin-right: 10px" placeholder="运行状态" @on-change="selectStatus">
           <Option v-for="item in statusList" :value="item.id" :key="item.id">{{ item.name }}</Option>
+        </Select>
+        <Select v-show="param.workStatus === 1" v-model="param.isAlarm" clearable style="width:200px" placeholder="故障状态" @on-change="selectStatusAlarm">
+          <Option v-for="item in alarmList" :value="item.id" :key="item.id">{{ item.name }}</Option>
         </Select>
       </Row>
       <div class="content">
         <div class="empty" v-if="isEmpty">暂无数据</div>
         <div class="tobaccoItem" v-if="!isEmpty"  v-for ="(item, index) in tobaccoList" :key="index" :style="{'visibility': item.workStatus === -1 ? 'hidden' : 'visible'}" @click="checkDetail(item)">
-          <div class="tabaccoTop" align="center" :style="{'background': item.workStatus === 1 ? '#85BE3B' : item.workStatus === 2 ? '#EF4A4A' :'#999' }">
+          <div class="tabaccoTop" align="center" v-show="item.workStatus !== 2" :style="{'background': item.workStatus === 1 ? '#85BE3B' : item.workStatus === 2 ? '#EF4A4A' :'#999' }">
             <img src="../../../assets/tobacco.png" alt="" class="image">
+          </div>
+          <div class="tabaccoTop" align="center" v-show="item.workStatus === 2">
+            <img src="../../../assets/leave.png" height="100" width="100"/>
           </div>
           <div class="nameText">{{item.cooperationName }}</div>
           <div class="nameText">{{item.houseName}}</div>
           <Row style="padding-top: 15px">
-            <div  :style="{'color': item.workStatus === 1 ? '#2F8B75' : item.workStatus === 2 ? '#EF4A4A' :'#999' }" class="statusLog">
-              <span style="font-size: 16px">{{item.workStatus === 1 ? '运行中' : item.workStatus === 2 ? '故障中' : '停用中'}}</span>
-              <Icon :type="item.workStatus === 1 ? 'md-refresh' : item.workStatus === 2 ? 'md-warning' : 'md-remove-circle'" size="24" style="margin-top: -3px"/>
+            <div  :style="{'color': item.workStatus === 1 ? '#2F8B75' : item.workStatus === 2 ? '#999' :item.workStatus === 3 ? '#EF4A4A' :'#999' }" class="statusLog">
+              <span style="font-size: 16px">{{item.workStatus === 1 ? '运行中' : item.workStatus === 2 ? '离线中' : item.workStatus === 3 ? '故障中' : '停用中'}}</span>
+              <!--md-close-circle-->
+              <Icon :type="item.workStatus === 1 ? 'md-refresh' : item.workStatus === 2 ? 'md-close-circle' : item.workStatus === 3 ? 'md-warning' : 'md-remove-circle'" size="24" style="margin-top: -3px"/>
             </div>
             <div style="float: right;font-size: 14px;color:#666">
               <div style="margin-top:4px">
@@ -37,7 +44,7 @@
       </div>
       <div style="text-align: center;margin-top: 10px">
         <Page :total="total" :page-size="rows" @on-page-size-change="doPageSizeChange" @on-change="change" show-sizer show-total :page-size-opts="size"
-              ref="tablePage" show-elevator ></Page>
+              ref="tablePage" show-elevator :transfer="true"></Page>
       </div>
     </div>
 </template>
@@ -53,7 +60,8 @@ export default {
         pageSize: 10,
         companyId: '',
         cooperationId: '',
-        workStatus: ''
+        workStatus: '',
+        isAlarm: ''
       },
       size: [10, 20, 30],
       total: 0,
@@ -61,6 +69,16 @@ export default {
       rows: 10,
       cooperativeList: [],
       companyList: [],
+      alarmList: [
+        {
+          id: 1,
+          name: '故障中'
+        },
+        {
+          id: 0,
+          name: '无故障'
+        }
+      ],
       statusList: [
         {
           id: 1,
@@ -68,7 +86,7 @@ export default {
         },
         {
           id: 2,
-          name: '故障中'
+          name: '离线中'
         },
         {
           id: 0,
@@ -144,6 +162,17 @@ export default {
       var thi = this
       thi.getTableDatas(thi.param)
     },
+    selectStatusAlarm (change) {
+      if (change !== undefined) {
+        this.param.isAlarm = change
+      } else {
+        this.param.isAlarm = ''
+      }
+      this.param.pageNum = 1
+      this.page = 1
+      var thi = this
+      thi.getTableDatas(thi.param)
+    },
     // 点击分页页码
     change (page) {
       this.page = page
@@ -183,9 +212,9 @@ export default {
   },
   created: function () {
     // 首页路由
-    if (this.$route.params !== undefined && this.$route.params.pageParam === undefined) {
-      this.param.companyId = this.$route.params.companyId
-      this.param.cooperationId = this.$route.params.cooperationId
+    if (this.$route.params.firstParam !== undefined) {
+      this.param.companyId = this.$route.params.firstParam.companyId
+      this.param.cooperationId = this.$route.params.firstParam.cooperationId
     }
     // 历史图片返回路由
     if (this.$route.params.pageParam !== undefined) {

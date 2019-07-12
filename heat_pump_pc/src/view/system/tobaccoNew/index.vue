@@ -72,12 +72,12 @@ export default {
           align: 'center'
         },
         {
-          title: '网关',
+          title: '网关编号',
           key: 'gatewayId',
           align: 'center'
         },
         {
-          title: 'dtu编号',
+          title: '设备编号',
           key: 'number',
           align: 'center'
         },

@@ -27,7 +27,7 @@
       </div>
       <div style="text-align: center;margin-top: 10px">
         <Page :total="total" :page-size="rows" @on-page-size-change="doPageSizeChange" @on-change="change" show-sizer show-total :page-size-opts="size"
-              ref="tablePage" show-elevator ></Page>
+              ref="tablePage" show-elevator :transfer="true"></Page>
       </div>
     </div>
 </template>
@@ -40,16 +40,16 @@ export default {
       isEmpty: true,
       param: {
         pageNum: 1,
-        pageSize: 10,
+        pageSize: 8,
         userId: '',
         startTime: '',
         endTime: '',
         houseId: ''
       },
-      size: [10, 20, 30, 40, 50],
+      size: [8, 16, 32, 40, 48],
       total: 0,
       page: 1,
-      rows: 10,
+      rows: 8,
       userList: [],
       imageList: []
     }
@@ -87,13 +87,13 @@ export default {
     change (page) {
       this.page = page
       this.param.pageNum = this.page
-      this.getTableDatas(this.param)
+      this.getImage(this.param)
     },
     // 改变当前显示的行数
     doPageSizeChange: function (size) {
       this.rows = size
       this.param.pageSize = this.rows
-      this.getTableDatas(this.param)
+      this.getImage(this.param)
     },
     // 烤房图片
     getImage (par) {

@@ -113,7 +113,7 @@ export default {
             cooperationId: s.id
           }
           console.log(par)
-          thi.$router.push({name: 'tobacco_show', params: par})
+          thi.$router.push({name: 'tobacco_show', params: {firstParam: par}})
         })
       })
       marker.addEventListener('mouseout', function (e) {

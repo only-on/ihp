@@ -99,9 +99,9 @@
                 :label="'角色 ' + item.index"
                 :prop="'roleList.' + index + '.value'"
                 :rules="{required: true, message: '角色 ' + item.index +' 不能为空', trigger: 'blur'}">
-                <Row>
+                <Row  @click.native="rowChange(index)">
                   <Col span="24">
-                  <div  @click="rowChange(index)">
+                  <div >
                     <Select :transfer="true" v-model="item.companyId" style="width:200px;float: left;text-align: left" placeholder="分公司" @on-change="selectChange">
                       <Option v-for="item in companyList" :value="item.id" :key="item.id">{{ item.name }}</Option>
                     </Select>
